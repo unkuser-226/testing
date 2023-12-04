@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        p#first {
+            animation: appear 2s;
+        }
+
+        p#second {
+            animation: appear 8s;
+        }
+
+        p#third {
+            animation: appear 12s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <h1>-- A Pegadinha --</h1>
+        <p id="first">
+            - Passadas algumas horas, saímos da casa de nosso amigo e nos despedimos como sempre. Porém, todos nós, com excessão de Joseph, nos encontramos de novo propositalmente para irmos juntos até o local onde o encontro tinha sido marcado.
+        </p>
+        <p id="second">
+            - Sim, Joseph não se encontraria com sua Ex como imaginara, mas sim com nós, seus amigos (se é que ele ainda nos considera isso).
+        </p>
+        <p id="third">
+            - O encontro seria na praça central, às 14:00 horas.
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'thejoke.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 15000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

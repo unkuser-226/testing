@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        div#suspect {
+            height: 300px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 20px 15px black;
+            background-image: url(../images/suspect.jpg);
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            justify-self: center;
+            animation: appearImage 21s;
+        }
+
+        strong {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        strong#orange {
+            color: orange;
+            text-shadow: 0px 0px 5px orange;
+            animation: appear 26s;
+        }
+        strong#yellow {
+            color: yellow;
+            text-shadow: 0px 0px 5px yellow;
+            animation: appear 27s;
+        }
+        strong#green {
+            color: green;
+            text-shadow: 0px 0px 5px green;
+            animation: appear 28s;
+        }
+        strong#blue {
+            color: blue;
+            text-shadow: 0px 0px 5px blue;
+            animation: appear 29s;
+        }
+
+        p#first {
+            animation: appear 2s;
+        }
+        p#second {
+            animation: appear 8s;
+        }
+
+        p#third {
+            animation: appear 14s;
+        }
+
+        p#fourth {
+            animation: appear 20s;
+        }
+
+        p#fifth {
+            animation: appear 26s;
+        }
+
+        p#sixth {
+            animation: appear 32s;
+        }
+
+        p#seventh {
+            animation: appear 38s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <p id="first">
+            - A ira tomou conta de Joseph, de uma maneira que ele nunca tinha sentido antes.
+        </p>
+        <p id="second">
+            - Ele...
+        </p>
+        <p id="third">
+            - Ele............................................
+        </p>
+        <p id="fourth">
+            - Ele nos fez uma breve pergunta:
+        </p>
+        <p id="fifth">
+            - Cês são <strong id="orange">g</strong><strong id="yellow">a</strong><strong id="green">y</strong><strong id="blue">s</strong> man? 
+        </p>
+        <div id="suspect">
+        </div>
+        <p id="sixth">
+            - Estranhamos, mas respondemos que não, e que ele apenas tinha caído na pegadinha do mário games.
+        </p>
+        <p id="seventh">
+            - Ele voltou a ficar irritado, até que...
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'transformation.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 42000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

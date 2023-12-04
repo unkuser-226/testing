@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        div#childhood {
+            height: 300px;
+            width: 80%;
+            max-width: 400px;
+            background-image: url(../images/childhood.jpg);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-self: center;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 20px 15px black;
+            animation: appearImage 2s;
+        }
+
+        p#first {
+            animation: appear 4s;
+        }
+
+        p#second {
+            animation: appear 10s;
+        }
+
+        p#third {
+            animation: appear 16s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <div id="childhood">
+        </div>
+        <p id="first">
+            - Em sua infância, sempre riam e apontavam para Joseph, diziam que ele não seria capaz de conquistar nada em sua vida, e que seu destino era morrer triste, sozinho e na sarjeta.
+        </p>
+        <p id="second">
+            - Essas memórias nunca saíram da mente de Joseph, que havia jurado a sí mesmo que nunca mais seria humilhado por ninguém, ninguém mesmo.
+        </p>
+        <p id="third">
+            - Por ironia do destino, nesse momento, ele estava sendo humilhado, e por seus próprios amigos...
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'thequestion.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 20000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

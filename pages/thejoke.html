@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        div#restodotexto {
+            display: none;
+        }
+
+        p#first {
+            animation: appear 2s;
+        }
+
+        p#second {
+            animation: appear 6s;
+        }
+
+        button#showcontent {
+            background-color: transparent;
+            border: none;
+            color: white;
+            animation: appearButton 10s;
+            width: 60%;
+            height: 70px;
+            justify-self: center;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: inset 0px 0px 5px 3px white;
+            text-shadow: 0px 0px 3px white;
+            background-color: rgb(20, 20, 20);
+            border-radius: 5px;
+        }
+
+        button#showcontent:hover {
+            cursor: pointer;
+        }
+
+        button#showcontent:active {
+            background-color: rgb(50, 50, 50);
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <p id="first">
+            - Chegado o horário combinado, fomos para a praça central, e nos escondemos num lugar onde era possivel ver toda a movimentação.
+        </p>
+        <p id="second">
+            - Em poucos minutos, Joseph apareceu, bem arrumado, parecia que iria a um casamento. Ficou alguns minutos esperando e então...
+        </p>
+        <button id="showcontent" onclick="mostrarTexto()">Prosseguir?</button>
+        <div id="restodotexto">
+            <p id="third" style="animation: appear 2s;">
+                - sua ex realmente apareceu, ele foi então falar com ela, mas ela lhe deu o fora mais terrível de sua existência.
+            </p>
+            <p id="fourth" style="animation: appear 6s;">
+                - Pra piorar a situação, nós saímos de onde estávamos e fomos em direção a ele...
+            </p>
+        </div>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        let botaoParaTexto = document.querySelector('button#showcontent')
+        function mostrarTexto() {
+            setTimeout(show, 2000)
+            function show () {
+            let texto = document.querySelector('div#restodotexto')
+            const show = texto.style.display = 'grid'
+            texto.style.justifyItems = 'left'
+            texto.style.height = '100%'
+            }
+
+            if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'humilhate.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 10000)
+            cont ++
+        } else {
+        }
+        }
+    </script>
+</body>
+</html>

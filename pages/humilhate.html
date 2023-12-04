@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        @keyframes appearDiv {
+            0% {
+                width: 0;
+                border: none;
+            }
+
+            60% {
+                width: 0;
+                border: none;
+            }
+        }
+
+        @keyframes appearImage {
+            0% {
+                width: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background-image: none;
+            }
+
+            90% {
+                width: 0;
+                border-radius: 0;
+                box-shadow: none;
+            } 
+        }
+
+        p#first {
+            animation: appear 2s;
+        }
+
+        div#humilhacao {
+            animation: appearDiv 6s;
+            border-top: 1px solid white;
+            justify-self: center;
+            width: 90%;
+            border-bottom: 1px solid white;
+            border-radius: 5px;
+        }
+
+        div#humilhacao > p {
+            color: cyan;
+            text-shadow: 0px 0px 5px blue;
+        }
+
+        p#second {
+            animation: appear 8s;
+        }
+        p#third {
+            animation: appear 12s;
+        }
+        p#fourth {
+            animation: appear 16s;
+        }
+        p#fifth {
+            animation: appear 20s;
+        }
+
+        div#trauma {
+            height: 200px;
+            width: 80%;
+            max-width: 400px;
+            background-image: url(../images/trauma.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            justify-self: center;
+            box-shadow: inset 0px 0px 20px 15px black;
+            border-radius: 10px;
+            animation: appearImage 22s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <p id="first">
+            - Chegando perto dele, todos começaram a zoar e humilhar Joseph:
+        </p>
+        <div id="humilhacao">
+            <p id="second">
+                "Você realmente achou que ela iria te querer de volta?"
+            </p>
+            <p id="third">
+                "Otário kkkkkk"
+            </p>
+            <p id="fourth">
+                "Ala o cara é apaixonado na ex KAPAKAPAKAPA"
+            </p>
+        </div>
+        <p id="fifth">
+            - Isso trouxe de volta em sua mente lembranças de traumas de infância...
+        </p>
+
+        <div id="trauma">
+        </div>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'childmemories.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 25000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

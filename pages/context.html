@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de tudo</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+
+        div#vigarice {
+            height: 200px;
+            width: 40%;
+            max-width: 300px;
+            background-image: url(../images/emoji_planejando.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            justify-self: center;
+            animation-duration: 9s;
+            animation-name: appearImage;
+        }
+
+        p#first {
+            animation: appear 2s;
+        }
+
+        p#second {
+            animation: appear 6s;
+        }
+
+        p#third {
+            animation: appear 10s;
+        }
+
+        p#fourth {
+            animation: appear 14s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <p id="first">
+            - Joseph sempre foi um cara sorridente, brincalhão, mas nesse dia algo diferente aconteceu.
+        </p>
+        <p id="second">
+            - Entre tantas brincadeiras, uma em específico não agradou muito Joseph...
+        </p>
+        <p id="third">
+            - Eram aproximadamente 10:00 horas, numa Quarta-Feira, resolvemos fazer a pegadinha master com ele.
+        </p>
+        <div id="vigarice">
+        </div>
+        <p id="fourth">
+            - Dias antes, combinamos que um de nós iria fingir ser a Ex namorada dele, criando uma conta fake nas redes sociais e chamando ele no privado para combinar um encontro.
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'preparingjoke.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 18000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

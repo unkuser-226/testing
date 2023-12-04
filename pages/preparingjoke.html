@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de tudo</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        div {
+            height: 300px;
+            width: 80%;
+            max-width: 400px;
+            background-image: url(../images/heart.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            justify-self: center;
+            box-shadow: inset 0px 0px 20px 15px black;
+            animation: appearImage 8s;
+        }
+
+        p#first {
+            animation: appear 2s;
+        }
+
+        p#second {
+            animation: appear 6s;
+        }
+
+        p#third {
+            animation: appear 12s;
+        }
+
+        p#fourth {
+            animation: appear 16s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <p id="first">
+            - Assim nós fizemos. E-gídio, amigo nosso, criou a conta e começou a conversar com Joseph, que ficou extremamente animado.
+        </p>
+        <p id="second">
+            - No momento em que o encontro foi combinado, o coração de Joseph bateu mais forte que pai bêbado
+        </p>
+        <div id="foto-heart">
+        </div>
+        <p id="third">
+            - O encontro havia sido marcado exatamente para essa Quarta-Feira, ele não desconfiou de nada sobre nós, e ainda nos contou com muita alegria com quem iria se encontrar nesse mesmo dia.
+        </p>
+        <p id="fourth">
+            - Até hoje nos arrependemos disso...
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'titlethejoke.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 18000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>

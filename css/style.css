@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@keyframes header{
+    from {
+        padding: 0px;
+    }
+
+    to {
+        padding: 30px;
+    }
+}
+
+@keyframes appear {
+    from {
+        color: transparent;
+    }
+
+    to {
+        color: black;
+    }
+}
+
+@keyframes textfloat {
+    0% {
+        top: -3px;
+        text-shadow: 3px 4px 0px #737189;
+    }
+
+    100% {
+        color: black;
+        top: 3px;
+        
+    }
+}
+
+@keyframes textfloat2 {
+    0% {
+        top: -3px;
+    }
+
+    100% {
+        top: 3px;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        white-space: nowrap;
+    }
+
+    to {
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1b1923;
+    background-position: center center;
+}
+
+header {
+    background-color: #272635;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+    animation: header 2s;
+}
+
+header > h1 {
+    text-shadow: 3px 3px 4px gray;
+    transition: text-shadow 2s;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+    url(../images/background.png);
+    background-size: 30px;
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #d0d0d0;
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+section > h2 {
+    position: relative;
+    font-size: 4em;
+    text-shadow: 2px 2px 0px #737189;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-align: center;
+    animation: textfloat 0.8s infinite alternate;
+}
+
+section > p#descricao {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    overflow: hidden;
+    white-space: wrap;
+    animation: typing 2s;
+}
+
+section > p#alerta {
+    text-align: center;
+    position: relative;
+    font-family: monospace;
+    font-size: 1.2em;
+    animation:appear 20s, textfloat2 0.8s infinite alternate;
+}
+
+div#imagem1 {
+    justify-self: center;
+    height: 300px;
+    width: 90%;
+    max-width: 400px;
+    background-image: url(../images/normal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 5px solid #272635;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 40px 20px black;
+    transition: box-shadow 2s, background-image 1s;
+}
+
+div#imagem1:hover  {
+    box-shadow: inset 0px 0px 20px 10px black;
+    background-image: url(../images/corrupted.jpg);
+    transition: box-shadow 2s, background-image 1s;
+}

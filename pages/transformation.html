@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A pegadinha...</title>
+    <link rel="stylesheet" href="../css/historia.css">
+    <style>
+        p#first {
+            animation: appear 2s;
+        }
+
+        div#n-n{
+            height: 300px;
+            width: 100%;
+            max-width: 400px;
+            background-image: url(../images/corrupted.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            justify-self: center;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 45px 35px black;
+            animation: appearImage 7s;
+        }
+
+        p#second {
+            animation: appear 8s;
+            font-size: 1.7em;
+            justify-self: center;
+        }
+
+        p#second > strong {
+            color: red;
+            text-shadow: 0px 0px 5px darkred;
+            animation: appear 12s;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p id="first">
+            - Ele se transformou em algo que nunca ninguém no mundo viu, algo mais negro que o próprio escuro, trevas em pessoa...
+        </p>
+
+        <div id="n-n">
+        </div>
+
+        <p id="second">
+            - Sim, ele era o <strong>NEGRO NEGRO</strong>.
+        </p>
+    </section>
+
+    <script>
+            function redirecionar() {
+            window.location = 'we_run.html'
+        }
+        setTimeout(redirecionar, 20000);
+    </script>
+</body>
+</html>

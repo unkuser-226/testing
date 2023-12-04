@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/historia.css">
+    <title>Inicio de tudo</title>
+    <style>
+        div#foto-normal {
+            justify-self: center;
+            height: 300px;
+            width: 80%;
+            max-width: 500px;
+            background-image: url(../images/normal.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            box-shadow: inset 0px 0px 25px 20px rgb(30, 30, 30);
+            border-radius: 20px;
+            overflow: hidden;
+            animation-name: appearImage;
+            animation-duration: 5s; 
+        }
+
+        section > p#first {
+            animation-name: appear;
+            animation-duration: 2s;
+        }
+
+        section > p#second {
+            animation: appear 8s;
+        }
+    </style>
+</head>
+<body>
+    <section id="conteudo">
+        <h1>-- Inicio de tudo --</h1>
+        <p id="first">
+            - Estavamos todos na casa de um amigo nosso, brincando e zoando uns com os outros. Joseph estava junto de nós, rindo e conversando como sempre.
+        </p>
+
+        <div id="foto-normal"></div>
+
+        <p id="second">
+            - Mal sabiamos o que estava por vir...
+        </p>
+    </section>
+
+    <script>
+        let secao = document.querySelector('section#conteudo')
+        let cont = 0
+        if (cont == 0) {
+            function botaoDeProsseguir() {
+                const continuar = document.createElement('a')
+                continuar.setAttribute('href', 'context.html')
+                continuar.text = 'Continuar'
+                continuar.style.textDecoration = 'none'
+                continuar.style.width = '50%'
+                continuar.style.maxWidth = '300px'
+                continuar.style.textAlign = 'center'
+                continuar.style.border = '2px solid white'
+                continuar.style.padding = '20px'
+                continuar.style.borderRadius = '5px'
+                continuar.style.display = 'block'
+                continuar.style.margin =  'auto'
+                continuar.style.backgroundColor = 'rgb(20, 20, 20)'
+                continuar.style.color = 'white'
+                continuar.style.boxShadow = 'inset 0px 0px 3px 1px white'
+                continuar.style.textShadow = '0px 0px 3px white'
+                continuar.style.justifySelf = 'center'
+                secao.appendChild(continuar)
+            }
+            setTimeout(botaoDeProsseguir, 10000)
+            cont ++
+        } else {
+        }
+    </script>
+</body>
+</html>
